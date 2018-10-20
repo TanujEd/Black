@@ -1,0 +1,15 @@
+.removeInput {
+    position: absolute;
+    right: 15px;
+    z-index: 999;
+    background-color: white;
+    display: block;
+    border-radius: 10px;
+    font-size: 10px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-top: 2px;
+    cursor: pointer;
+  }
