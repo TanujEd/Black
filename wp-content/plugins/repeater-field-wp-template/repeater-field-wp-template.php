@@ -59,7 +59,10 @@ if ( !function_exists('pr') ){
         <strong><?php _e( 'Field Name', 'yourtextdomain' ); ?></strong>
         </label>
         <div id="field_data">
-           <?php  pr($field_data); ?>
+
+
+           <?php $field_data=array("uniqueness"); ?>
+           <?php pr($field_data); ?>
 
             <?php if(!empty($field_data)) {?>
                 <?php foreach ( $field_data as $field ) { ?>
@@ -76,13 +79,14 @@ if ( !function_exists('pr') ){
             <ul id="repeater-list">
                 <li>Uniqueid</li>
                 <li>Local id</li>
+                <li>Uniqueness</li>
             </ul>
         </div>
         <?php
         }
         add_shortcode( 'faq_repeater', 'faq_repeater' );
 
-
+    
 
 
 // if(! defined('ABSPATH')){
