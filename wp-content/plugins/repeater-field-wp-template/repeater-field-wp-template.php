@@ -56,38 +56,34 @@ if ( !function_exists('pr') ){
         ?>  
         <div id="<?php e($atts['id']); ?>">
         <label for="field_data">
-        <strong><?php _e( 'Field Name', 'yourtextdomain' ); ?></strong>
+        <strong><?php //_e( 'Field Name', 'yourtextdomain' ); ?></strong>
         </label>
         <div id="field_data">
+           <?php //var_dump($field_data);?>
+           <?php // pr($field_data); ?>
 
-
-           <?php $field_data=array("uniqueness"); ?>
-           <?php pr($field_data); ?>
-
-            <?php if(!empty($field_data)) {?>
+            <?php if(!empty($field_data)) {?>                                                                                       
                 <?php foreach ( $field_data as $field ) { ?>
-                    <div class="field-group">
-                        <input  type="text"  id="create_field" name="field_data[]"   value="<?php echo $field; ?>" />    
-                        <button type="button" id="field_data_remove" class="button button-secondary field-data-remove">Remove</button>
-                    </div>
+                    <!-- <div class="field-group"> -->
+                         <!-- <input  type="text"  id="create_field"    value="<?php //echo $field; ?>" />  -->
+                             <!-- <input  type="text"  id="create_field"  name="text" placeholder="Enter your text" />  -->
+                        <!-- <button type="button" id="field_data_remove" class="button button-secondary field-data-remove">Remove</button>
+                    </div> -->
                 <?php } ?>
             <?php } ?>
                     
         </div>
-        <!-- <input type="button"  id="field_data_add"  onclick="showInput();" name="submit" class="button button-primary" value="submit" /> -->
-        <button type="button" id="field_data_add"   class="button button-primary">Add</button>
-            <ul id="repeater-list">
-                <li>Uniqueid</li>
-                <li>Local id</li>
-                <li>Uniqueness</li>
-                <li>Builder ness</li>
-            </ul>
-        </div>
+        <button type="button" id="field_data_add"  class="button button-primary">Add</button><br/>
+        <label>Your input: </label> 
+        <p id='display'></p>       
+         <ul id="repeater-list"></ul>
+    
+        <!-- </div> -->
         <?php
         }
         add_shortcode( 'faq_repeater', 'faq_repeater' );
 
-    
+
 
 
 // if(! defined('ABSPATH')){
@@ -101,3 +97,4 @@ if ( !function_exists('pr') ){
 //   echo "Hey , you're not able to access it";
 //   exit;
 // }
+
